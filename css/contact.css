@@ -1,0 +1,40 @@
+body {
+    background: #292e32;
+    /* overflow-x: hidden; */
+}
+
+.navigation {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.wrapper {
+    margin-left: 62px;
+    margin-right: 62px;
+}
+
+.icon-list {
+    padding: 10px 0px 10px 0px;
+    justify-content: space-evenly;
+}
+
+.icons {
+    padding: 10px 0px 10px 10px;
+}
+
+a {
+    text-decoration: none
+}
+
+h4 {
+    color: #d4d4d4;
+}
+
+footer {
+    padding-left: 62px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}

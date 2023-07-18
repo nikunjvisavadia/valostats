@@ -1,0 +1,59 @@
+body {
+    background: #292e32;
+    overflow-x: hidden;
+}
+
+.navigation {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.wrapper {
+    margin-left: 62px;
+    margin-right: 62px;
+}
+
+.heading {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.head-txt {
+    color: #d4d4d4;
+    padding-left: 12px;
+}
+
+.txt {
+    font-weight: bold;
+}
+
+.col1 {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.region-name {
+    margin: 0px;
+    font-size: 11px;
+    padding: 0px 0px 13px 20px;
+    color: #da626c;
+}
+
+hr {
+    height: 10px;
+    color: #d4d4d4;
+    margin: 0px
+}
+
+.rank {
+    padding: auto;
+}
+
+footer {
+    padding-left: 62px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}

@@ -1,0 +1,161 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.3
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Mar 17, 2023 at 05:35 PM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.4
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `valostats`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `agents`
+--
+
+CREATE TABLE `agents` (
+  `a_id` int(3) NOT NULL,
+  `a_name` varchar(50) NOT NULL DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `agents`
+--
+
+INSERT INTO `agents` (`a_id`, `a_name`) VALUES
+(101, 'Jett'),
+(102, 'Reyna'),
+(103, 'Raze'),
+(104, 'Neon');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `player`
+--
+
+CREATE TABLE `player` (
+  `p_id` int(3) NOT NULL,
+  `p_name` varchar(50) DEFAULT NULL,
+  `team_id` int(3) DEFAULT NULL,
+  `ACS` int(3) DEFAULT NULL,
+  `hspr` int(2) DEFAULT NULL,
+  `a_id` int(3) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `player`
+--
+
+INSERT INTO `player` (`p_id`, `p_name`, `team_id`, `ACS`, `hspr`, `a_id`) VALUES
+(101, 'DEATHMAKER', 10, 233, 32, 101),
+(102, 'Vibhor', 16, 196, 19, 103),
+(103, 'Amaterasu', 10, 182, 26, 102),
+(111, 'SkRossi', 11, 244, 25, 101),
+(121, 'Rawfiul', 12, 262, 37, 101),
+(122, 'Excali', 12, 267, 37, 101),
+(123, 'Hikka', 12, 210, 25, 102),
+(131, 'Paradox', 14, 265, 14, 103),
+(132, 'Rellik', 13, 198, 37, 102),
+(133, '1TapGod', 13, 233, 41, 102),
+(134, 'Psy', 13, 196, 20, 104),
+(141, 'JN', 14, 232, 23, 101),
+(142, 'Buster', 14, 250, 18, 103),
+(143, 'B2', 14, 154, 33, 102),
+(151, 'KnightRider', 15, 229, 30, 101),
+(152, 'Scargod', 15, 218, 20, 103);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `teams`
+--
+
+CREATE TABLE `teams` (
+  `t_id` int(3) NOT NULL,
+  `t_name` varchar(50) DEFAULT NULL,
+  `region` varchar(50) DEFAULT NULL,
+  `rank_pts` int(4) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `teams`
+--
+
+INSERT INTO `teams` (`t_id`, `t_name`, `region`, `rank_pts`) VALUES
+(10, 'Velocity Gaming', 'India', 2400),
+(11, 'Global Esports', 'India', 2301),
+(12, 'Enigma Gaming', 'India', 2202),
+(13, 'True Rippers', 'India', 1801),
+(14, 'Team Valor', 'India', 1400),
+(15, 'Revenant Esports', 'India', 2013),
+(16, 'Orangutan', 'India', 2200);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `fname` varchar(50) NOT NULL,
+  `lname` varchar(50) NOT NULL,
+  `username` varchar(25) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(16) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`fname`, `lname`, `username`, `email`, `password`) VALUES
+('Jay', 'Rohit', 'Jordan', 'jayrohit570@gmail.com', '1234'),
+('Jordan', 'Rohit', 'NoobJ0RDAN', 'jordan31052002@gmail.com', '12345');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `agents`
+--
+ALTER TABLE `agents`
+  ADD PRIMARY KEY (`a_id`);
+
+--
+-- Indexes for table `player`
+--
+ALTER TABLE `player`
+  ADD PRIMARY KEY (`p_id`,`a_id`);
+
+--
+-- Indexes for table `teams`
+--
+ALTER TABLE `teams`
+  ADD PRIMARY KEY (`t_id`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`username`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -1,0 +1,41 @@
+body {
+    background: #292e32;
+    overflow-x: hidden;
+}
+
+.navigation {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.wrapper {
+    margin-left: 62px;
+    margin-right: 62px;
+}
+
+.sort-txt {
+    margin: 0px;
+    font-size: 20px;
+    padding: 10px 0px 0px 24px;
+    color: #da626c;
+}
+
+.select-list {
+    /* padding: 0px 10px 10px 10/px ; */
+    color: #d4d4d4;
+}
+
+hr {
+    height: 10px;
+    color: #d4d4d4;
+    margin: 5px 0px 5px 0px
+}
+
+footer {
+    padding-left: 62px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}

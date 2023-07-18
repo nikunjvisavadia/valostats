@@ -1,0 +1,40 @@
+body {
+    background: #292e32;
+    overflow-x: hidden;
+}
+
+.navigation {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.jumbo {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-left: 62px;
+    margin-right: 62px;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: #d4d4d4
+}
+
+.crds {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 15px;
+    display: flex;
+    color: #d4d4d4;
+}
+
+.crd {
+    margin-bottom: 15px;
+}
+
+footer {
+    padding-left: 62px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
